@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kepton Properti</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">KeptonProperti</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="property.html">Properti</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center d-flex justify-content-center align-items-center flex-column" style="
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200&h=600') center/cover no-repeat;
+  position: relative;
+  color: #fff;
+">
+  <!-- Overlay gelap -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index:1;
+  "></div>
+
+  <!-- Teks hero -->
+  <div class="text-center px-3" style="position: relative; z-index:2;">
+    <h1 class="display-5 fw-bold">Temukan Properti Impianmu</h1>
+    <p class="lead">Rumah, Apartemen, dan Tanah dengan harga terbaik</p>
+    <a href="property.html" class="btn btn-primary btn-lg mt-3">Lihat Properti</a>
+  </div>
+</section>
+
+
+
+<section class="filter py-3 bg-light">
+  <div class="container">
+    <form id="filterForm" class="row g-2 align-items-center">
+      <div class="col-12 col-md-4">
+        <input type="text" class="form-control" id="lokasi" placeholder="Lokasi">
+      </div>
+      <div class="col-6 col-md-3">
+        <input type="number" class="form-control" id="hargaMin" placeholder="Harga Min">
+      </div>
+      <div class="col-6 col-md-3">
+        <input type="number" class="form-control" id="hargaMax" placeholder="Harga Max">
+      </div>
+      <div class="col-12 col-md-2 d-flex gap-2">
+        <button type="submit" class="btn btn-primary w-100">Filter</button>
+        <button type="button" class="btn btn-secondary w-100" id="resetFilter">Reset</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<section class="properties py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Properti Terbaru</h2>
+    <div id="propertyList" class="row g-4">
+      <!-- JS akan isi card properti satu per baris -->
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    <p>&copy; 2026 Kepton Properti. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

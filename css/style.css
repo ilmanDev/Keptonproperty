@@ -1,0 +1,81 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Hero */
+.hero { 
+  background: url('../img/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  height: 60vh;
+  display: flex; justify-content: center; align-items: center;
+  flex-direction: column;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Button */
+.btn-primary { background-color: #0d6efd; border: none; }
+.btn-primary:hover { background-color: #0b5ed7; }
+
+/* Navbar shadow */
+.navbar { transition: 0.3s; }
+.navbar.scrolled { background-color: #fff !important; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+/* Table hover */
+table tbody tr:hover { background-color: #f2f2f2; cursor: pointer; }
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.card {
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+}
+
+.card img {
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media(max-width:768px){
+  .card {
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* ← kunci agar gambar center vertical */
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media(max-width:768px){
+  .card {
+    flex-direction: column;
+    align-items: center; /* center di HP */
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
