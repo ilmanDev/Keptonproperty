@@ -79,3 +79,23 @@ table tbody tr:hover { background-color: #f2f2f2; cursor: pointer; }
     margin-bottom: 15px;
   }
 }
+#waButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+#waButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#waButton:hover {
+  transform: scale(1.1);
+}
